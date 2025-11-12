@@ -40,7 +40,6 @@ export async function POST(request: NextRequest) {
         source: 'web', // Mark as web chat
         userEmail,
         userName,
-        sessionAnalytics, // Store analytics data
       });
       console.log('[Chat API] Created new session with analytics:', !!sessionAnalytics);
     }

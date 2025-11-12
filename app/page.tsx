@@ -189,7 +189,7 @@ export default function Home() {
               href="#infrastructure"
               onClick={(e) => {
                 e.preventDefault();
-                trackCTAClick('Explore the Full System');
+                trackCTAClick('Explore the Full System', 'Infrastructure Section', '#infrastructure');
                 document.getElementById('infrastructure')?.scrollIntoView({ behavior: 'smooth' });
               }}
               initial={!shouldReduceMotion ? { opacity: 0, y: 10 } : {}}

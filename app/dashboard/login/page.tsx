@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 // Skip static generation for pages using useSearchParams
 export const dynamic = 'force-dynamic';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [email, setEmail] = useState('');
@@ -137,5 +137,13 @@ export default function LoginPage() {
         </p>
       </motion.div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-orange-200 via-pink-100 to-purple-100 flex items-center justify-center"><div>Loading...</div></div>}>
+      <LoginForm />
+    </Suspense>
   );
 }

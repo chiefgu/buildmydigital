@@ -114,9 +114,9 @@ export async function POST(request: NextRequest) {
       email,
       company,
       message,
-      ipAddress: leadData.ipAddress,
-      userAgent: leadData.userAgent,
-      referrer: leadData.referrer,
+      ipAddress: leadData.ipAddress || '',
+      userAgent: leadData.userAgent || '',
+      referrer: leadData.referrer || '',
       enrichedData: leadData.enrichedData,
       attribution: {
         touchpoints: journey.touchpointCount,

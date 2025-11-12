@@ -22,6 +22,7 @@ interface Session {
   isActive: boolean;
   messages: Message[];
   unreadCount?: number;
+  source?: 'web' | 'telegram' | 'whatsapp';
 }
 
 export default function ChatDashboard() {

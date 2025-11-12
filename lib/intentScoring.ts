@@ -42,6 +42,7 @@ export const INTENT_ACTIONS = {
   SCROLLED_TO_PRICING: { points: 10, label: 'Scrolled to Pricing' },
   SPENT_3MIN_ON_SITE: { points: 15, label: 'Spent 3+ minutes on site' },
   VIEWED_INFRASTRUCTURE: { points: 10, label: 'Viewed Infrastructure Section' },
+  VIEWED_SOLUTION: { points: 10, label: 'Viewed Solution Section' },
   CLICKED_CASE_STUDY: { points: 12, label: 'Clicked Case Study' },
   OPENED_CHAT_WIDGET: { points: 8, label: 'Opened Chat Widget' },
 

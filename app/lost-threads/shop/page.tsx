@@ -7,6 +7,9 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { products, formatPrice, Product } from '../data/products';
 
+// Make this route dynamic
+export const dynamic = 'force-dynamic';
+
 export default function ShopPage() {
   const shouldReduceMotion = useReducedMotion();
   const searchParams = useSearchParams();

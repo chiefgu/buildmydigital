@@ -529,7 +529,7 @@ export default function Home() {
 
           {/* Contact Form */}
           <HomeContactForm
-            shouldReduceMotion={shouldReduceMotion}
+            shouldReduceMotion={shouldReduceMotion || false}
             trackFormStart={trackFormStart}
             trackIntent={trackIntent}
             trackFormSubmit={trackFormSubmit}

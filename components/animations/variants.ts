@@ -7,7 +7,7 @@ export const fadeInUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] // Custom ease-out curve
+      ease: [0.22, 1, 0.36, 1] as const // Custom ease-out curve
     }
   }
 };
@@ -41,7 +41,7 @@ export const slideInFromLeft = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1]
+      ease: [0.22, 1, 0.36, 1] as const
     }
   }
 };
@@ -53,7 +53,7 @@ export const slideInFromRight = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1]
+      ease: [0.22, 1, 0.36, 1] as const
     }
   }
 };
@@ -65,7 +65,7 @@ export const slideInFromBottom = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.22, 1, 0.36, 1]
+      ease: [0.22, 1, 0.36, 1] as const
     }
   }
 };
@@ -102,7 +102,7 @@ export const staggerItem = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.22, 1, 0.36, 1]
+      ease: [0.22, 1, 0.36, 1] as const
     }
   }
 };
@@ -117,7 +117,7 @@ export const pillarVariants = [
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   },
@@ -130,7 +130,7 @@ export const pillarVariants = [
       transition: {
         duration: 0.6,
         delay: 0.2,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   },
@@ -143,7 +143,7 @@ export const pillarVariants = [
       transition: {
         duration: 0.6,
         delay: 0.4,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   },
@@ -156,7 +156,7 @@ export const pillarVariants = [
       transition: {
         duration: 0.6,
         delay: 0.6,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   }
@@ -186,7 +186,7 @@ export const headshotZoom = {
     transition: {
       duration: 0.4,
       delay: 0.3,
-      ease: [0.22, 1, 0.36, 1]
+      ease: [0.22, 1, 0.36, 1] as const
     }
   }
 };

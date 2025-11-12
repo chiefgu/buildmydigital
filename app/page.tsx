@@ -56,7 +56,7 @@ export default function Home() {
             <motion.h1
               initial={!shouldReduceMotion ? { opacity: 0, y: 30 } : {}}
               animate={!shouldReduceMotion ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
               className="text-[clamp(40px,5vw,72px)] font-semibold leading-[1.05] mb-6 mx-auto mt-12"
               style={{
                 fontFamily: 'Raveo, Arial, sans-serif',
@@ -212,7 +212,7 @@ export default function Home() {
               initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8 } : {}}
               whileInView={!shouldReduceMotion ? { opacity: 1, scale: 1 } : {}}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
               className="absolute inset-0 flex items-center justify-center"
             >
               <div className="relative" style={{ width: '500px', height: '500px' }}>
@@ -226,7 +226,7 @@ export default function Home() {
                     transition={{
                       duration: 0.8,
                       delay: i * 0.1,
-                      ease: [0.22, 1, 0.36, 1]
+                      ease: [0.22, 1, 0.36, 1] as const
                     }}
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-300/50"
                     style={{ width: `${size}px`, height: `${size}px` }}
@@ -282,7 +282,7 @@ export default function Home() {
                   transition={{
                     duration: 0.6,
                     delay: 0.4 + (i * 0.1),
-                    ease: [0.22, 1, 0.36, 1]
+                    ease: [0.22, 1, 0.36, 1] as const
                   }}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 >
@@ -1115,7 +1115,7 @@ function TestimonialCards() {
           visible: {
             opacity: 1,
             x: 0,
-            transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
+            transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }
           }
         }}
         whileHover={!shouldReduceMotion ? { scale: 1.02, transition: { duration: 0.3 } } : {}}
@@ -1125,7 +1125,7 @@ function TestimonialCards() {
           className="absolute inset-0"
           initial={{ scale: 1.15, y: -20 }}
           whileInView={{ scale: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
           viewport={{ once: false, amount: 0.3 }}
         >
           <Image
@@ -1707,7 +1707,7 @@ function ScrollInfrastructure() {
             key={activeIndex}
             initial={!shouldReduceMotion ? { opacity: 0, scale: 0.95 } : {}}
             animate={!shouldReduceMotion ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as const }}
             className={`relative bg-gradient-to-br ${pillars[activeIndex].gradient} rounded-3xl p-8 overflow-hidden h-[600px]`}
           >
             {/* Background Blob */}

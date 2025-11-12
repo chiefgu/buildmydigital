@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import { products, formatPrice, Product } from '../data/products';
 // Make this route dynamic
 export const dynamic = 'force-dynamic';
 
-export default function ShopPage() {
+function ShopContent() {
   const shouldReduceMotion = useReducedMotion();
   const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -164,5 +164,13 @@ export default function ShopPage() {
         </motion.div>
       )}
     </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><div>Loading...</div></div>}>
+      <ShopContent />
+    </Suspense>
   );
 }

@@ -1,0 +1,515 @@
+@import "tailwindcss";
+
+/* Raveo Font Family */
+@font-face {
+  font-family: 'Raveo';
+  src: url('/fonts/Raveo-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo';
+  src: url('/fonts/Raveo-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo';
+  src: url('/fonts/Raveo-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Raveo Display - Optimized for headlines */
+@font-face {
+  font-family: 'Raveo Display';
+  src: url('/fonts/RaveoDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo Display';
+  src: url('/fonts/RaveoDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo Display';
+  src: url('/fonts/RaveoDisplay-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo Display';
+  src: url('/fonts/RaveoDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* BUILDMYDIGITAL Design System - PREMIUM ENHANCED */
+
+  /* Primary Colors */
+  --color-charcoal: #2D3142;
+  --color-off-white: #F8F7F5;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Accent Colors */
+  --color-coral: #EF8354;
+  --color-red: #FA4149;
+  --color-slate: #4F5D75;
+  --color-cream: #EFEDE6;
+
+  /* Opacity Variations */
+  --opacity-dark-8: rgba(24, 30, 37, 0.08);
+  --opacity-dark-16: rgba(24, 30, 37, 0.16);
+  --opacity-dark-32: rgba(24, 30, 37, 0.32);
+  --opacity-dark-48: rgba(24, 30, 37, 0.48);
+  --opacity-dark-64: rgba(24, 30, 37, 0.64);
+
+  /* Typography */
+  --font-primary: 'Raveo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --spacing-section-sm: 80px;
+  --spacing-section-md: 120px;
+  --spacing-section-lg: 160px;
+
+  /* Border Radius - PREMIUM ENHANCEMENT: Increased from 8px to 12px */
+  --radius-sm: 12px;
+  --radius-pill: 1440px;
+
+  /* Transitions - PREMIUM ENHANCEMENT: Cubic-bezier bounce easing */
+  --transition-fast: 0.1s;
+  --transition-standard: 0.3s;
+  --easing-bounce: cubic-bezier(0.64, -0.09, 0.13, 1.15);
+
+  /* Shadows - PREMIUM ENHANCEMENT: Subtle depth */
+  --shadow-sm: 0 2px 8px rgba(24, 30, 37, 0.06);
+  --shadow-md: 0 4px 12px rgba(24, 30, 37, 0.08);
+  --shadow-lg: 0 8px 24px rgba(24, 30, 37, 0.10);
+
+  /* Hover Tints - PREMIUM ENHANCEMENT: 5% opacity backgrounds */
+  --tint-coral: rgba(239, 131, 84, 0.05);
+  --tint-charcoal: rgba(45, 49, 66, 0.05);
+}
+
+@theme inline {
+  /* Colors */
+  --color-charcoal: #2D3142;
+  --color-off-white: #F8F7F5;
+  --color-coral: #EF8354;
+  --color-red: #FA4149;
+  --color-slate: #4F5D75;
+  --color-cream: #EFEDE6;
+
+  /* Font Family */
+  --font-sans: 'Raveo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes */
+  --font-size-display-xl: 72px;
+  --font-size-display-lg: 48px;
+  --font-size-display-md: 32px;
+  --font-size-display-sm: 24px;
+  --font-size-body-lg: 18px;
+  --font-size-body: 16px;
+  --font-size-body-sm: 14px;
+
+  /* Line Heights */
+  --line-height-tight: 1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Letter Spacing */
+  --letter-spacing-tight-xl: -4px;
+  --letter-spacing-tight-lg: -3px;
+  --letter-spacing-tight-md: -1.5px;
+  --letter-spacing-tight-sm: -0.5px;
+
+  /* Spacing Scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-section-sm: 80px;
+  --spacing-section-md: 120px;
+  --spacing-section-lg: 160px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 1440px;
+
+  /* Transitions */
+  --transition-fast: 0.1s;
+  --transition-standard: 0.3s;
+}
+
+/* Section Spacing Utilities */
+.section-sm {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-md {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-lg {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+body {
+  background: var(--color-off-white);
+  color: var(--color-charcoal);
+  font-family: 'Raveo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix text wrapping issues */
+p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+/* Ensure proper text flow */
+* {
+  word-spacing: normal;
+}
+
+/* Display Text Styles */
+.text-display-xl {
+  font-size: var(--font-size-display-xl);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight-xl);
+}
+
+.text-display-lg {
+  font-size: var(--font-size-display-lg);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight-lg);
+}
+
+.text-display-md {
+  font-size: var(--font-size-display-md);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-tight-md);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Chat Widget Input Padding Fix - Override any resets */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px 16px !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure chat widget inputs have proper styling */
+input[id="userName"],
+input[id="userEmail"] {
+  padding: 12px 16px !important;
+  box-sizing: border-box !important;
+}
+
+/* CRITICAL: Prevent Tailwind utility classes from being overridden */
+/* This fixes issues where global CSS resets break Tailwind's width/max-width utilities */
+
+/* Ensure w-full works correctly */
+.w-full {
+  width: 100% !important;
+}
+
+/* Ensure max-width utilities work correctly */
+.max-w-sm {
+  max-width: 384px !important;
+}
+
+.max-w-md {
+  max-width: 448px !important;
+}
+
+.max-w-lg {
+  max-width: 512px !important;
+}
+
+.max-w-xl {
+  max-width: 576px !important;
+}
+
+.max-w-2xl {
+  max-width: 672px !important;
+}
+
+/* Ensure flex utilities work correctly */
+.flex {
+  display: flex !important;
+}
+
+.flex-1 {
+  flex: 1 1 0% !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+/* Ensure spacing utilities work correctly */
+.space-y-4 > * + * {
+  margin-top: 1rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem !important;
+}
+
+/* Ensure common display utilities work */
+.block {
+  display: block !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+/* Button Base Styles - PREMIUM ENHANCEMENTS */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 18px; /* PREMIUM: Increased from 16px for prominence */
+  transition: all 0.3s var(--easing-bounce); /* PREMIUM: Bounce easing */
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-coral);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #d97446;
+  transform: translateY(-2px) scale(1.02); /* PREMIUM: Combined transforms */
+  box-shadow: var(--shadow-md); /* PREMIUM: Subtle shadow on hover */
+}
+
+.btn-secondary {
+  background-color: var(--color-off-white);
+  color: var(--color-charcoal);
+  border: 1px solid var(--opacity-dark-32);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  border-color: var(--opacity-dark-48);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* PREMIUM: Dark button variant (inspired by Outgrid) */
+.btn-dark {
+  background-color: #32373c;
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background-color: #424751;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* PREMIUM: Advanced scroll-triggered animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for grids */
+.fade-in:nth-child(1) { transition-delay: 0ms; }
+.fade-in:nth-child(2) { transition-delay: 100ms; }
+.fade-in:nth-child(3) { transition-delay: 200ms; }
+.fade-in:nth-child(4) { transition-delay: 300ms; }
+.fade-in:nth-child(5) { transition-delay: 400ms; }
+.fade-in:nth-child(6) { transition-delay: 500ms; }
+
+/* Scale fade for cards */
+.scale-fade {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scale-fade.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide from left */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* PREMIUM: Enhanced card hover with sophisticated micro-interactions */
+.premium-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.premium-card:hover::before {
+  opacity: 1;
+}
+
+/* Button micro-interactions */
+.btn-animate {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-animate::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.btn-animate:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-animate:hover {
+  transform: translateY(-2px);
+}
+
+.btn-animate:active {
+  transform: translateY(0);
+}
+
+/* Parallax effect helper */
+.parallax-slow {
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Magnetic hover effect for interactive elements */
+.magnetic {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth reveal for text */
+.text-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.text-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrolling Logo Banner Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}

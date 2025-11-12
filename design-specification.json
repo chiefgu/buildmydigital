@@ -1,0 +1,868 @@
+{
+  "metadata": {
+    "url": "https://crafto.themezaa.com/digital-agency/",
+    "title": "Digital Agency - A Fully Customizable Crafto Pre-built Website for WordPress",
+    "timestamp": "2025-10-30T15:23:14.934Z",
+    "description": "Comprehensive design specification for recreating this website's visual styling"
+  },
+  "designSystem": {
+    "colors": {
+      "primary": [],
+      "backgrounds": [
+        "#2d2c2b",
+        "#f7d2ca",
+        "#e4e4e4",
+        "#1e1d1d",
+        "#ffea23",
+        "#000000",
+        "#48a133",
+        "#1f242e",
+        "#f7f7f7"
+      ],
+      "text": [
+        "#727272",
+        "#2d2c2b",
+        "#ffffff",
+        "#f7d2ca",
+        "#828282",
+        "#232323"
+      ],
+      "borders": [
+        "#727272",
+        "#2d2c2b",
+        "#ffffff",
+        "#f7d2ca",
+        "#e4e4e4",
+        "#000000",
+        "#232323"
+      ],
+      "accents": []
+    },
+    "typography": {
+      "fontFamilies": [
+        "Inter, sans-serif",
+        "Arial",
+        "\"Space Grotesk\", sans-serif"
+      ],
+      "headingSizes": {},
+      "bodySizes": [
+        "17px",
+        "24px",
+        "19px",
+        "14px",
+        "130px",
+        "20px",
+        "18px",
+        "16px",
+        "38px",
+        "21px",
+        "55.008px",
+        "110px",
+        "34px",
+        "42px",
+        "30px",
+        "12px",
+        "28px",
+        "140px",
+        "25px",
+        "15px"
+      ],
+      "fontWeights": [
+        "400",
+        "600",
+        "700",
+        "500"
+      ],
+      "lineHeights": [
+        "30px",
+        "24px",
+        "20px",
+        "21px",
+        "112px",
+        "18px",
+        "40px",
+        "55.008px",
+        "110px",
+        "32px",
+        "34px",
+        "42px",
+        "44.8px",
+        "28px",
+        "0px"
+      ],
+      "letterSpacing": [
+        "-8px",
+        "-0.5px",
+        "1px",
+        "-2px",
+        "-3px",
+        "-4px",
+        "0.5px",
+        "-6px",
+        "-1px"
+      ]
+    },
+    "spacing": {
+      "padding": [
+        "0px 65px",
+        "0px 15px",
+        "35px 0px",
+        "10px 20px",
+        "9px 24px",
+        "84px",
+        "0px 25px 50px",
+        "65px",
+        "110px 0px",
+        "0px 0px 110px",
+        "0px 60px 0px 15px",
+        "0px 15px 0px 0px",
+        "130px 0px",
+        "40px 0px",
+        "6px 15px",
+        "110px 0px 100px",
+        "0px 0px 2px",
+        "0px 10px",
+        "18px 34px",
+        "40px 60px 60px",
+        "110px 0px 0px",
+        "56.4922px",
+        "70px 0px 0px",
+        "0px 0px 20px",
+        "0px 0px 3px",
+        "6px 90px 8px 15px",
+        "9px 18px",
+        "16px 160px 16px 32px",
+        "20px 0px 21px",
+        "8px 16px 8px 0px"
+      ],
+      "margin": [
+        "0px auto",
+        "0px 0px 0px 154.57px",
+        "0px 6px 0px 0px",
+        "0px 0px 40px",
+        "0px 0px 30px",
+        "0px 0px 20px",
+        "0px 15px 0px 0px",
+        "0px 1px 0px 0px",
+        "0px 0px 60px",
+        "0px 0px 72px",
+        "0px 0px 0px 100px",
+        "0px 0px 5px",
+        "5px 0px 0px",
+        "0px 0px 48px",
+        "0px 0px 0px 97.5px",
+        "0px 20px 0px 0px",
+        "0px 0px 58.5px",
+        "0px 417.867px 0px 0px",
+        "0px 25px 0px 0px",
+        "0px 25px",
+        "0px 0px 0px 25px",
+        "0px -10px",
+        "0px 0px 0px 6px",
+        "0px -5px 0px 0px",
+        "0px 0px 131.5px",
+        "0px 0px 132px",
+        "0px 0px 180px",
+        "30px 0px 15px",
+        "0px 0px 0px -18px",
+        "0px 40px 0px 0px"
+      ],
+      "gaps": []
+    },
+    "borderRadius": [
+      "50%",
+      "100%",
+      "100px",
+      "4px",
+      "0px 4px 4px 0px",
+      "10px",
+      "5px",
+      "50px"
+    ],
+    "shadows": [
+      "rgba(0, 0, 0, 0.1) 0px 5px 20px 0px",
+      "rgba(0, 0, 0, 0.5) 0px 0px 0px 0px",
+      "rgba(0, 0, 0, 0.08) 0px 0px 10px 0px",
+      "rgba(0, 0, 0, 0.08) 0px 0px 20px 0px"
+    ],
+    "layout": {
+      "maxWidths": [
+        "100%",
+        "min(100%, 1220px)"
+      ],
+      "containers": [],
+      "gridSystems": []
+    }
+  },
+  "components": {
+    "navigation": {
+      "tag": "a",
+      "classes": "left-menu-nav-link before",
+      "styles": {
+        "display": "flex",
+        "position": "relative",
+        "backgroundColor": null,
+        "padding": "8px 0px 8px 16px",
+        "height": "34px",
+        "alignItems": "center",
+        "justifyContent": "normal"
+      }
+    },
+    "buttons": [
+      {
+        "tag": "button",
+        "classes": "navbar-toggler collapsed",
+        "text": "",
+        "styles": {
+          "display": "none",
+          "padding": "0px",
+          "fontSize": "24px",
+          "fontWeight": "400",
+          "color": "#727272",
+          "backgroundColor": null,
+          "border": "0px none rgb(114, 114, 114)",
+          "borderRadius": "0px",
+          "textTransform": "none",
+          "letterSpacing": "normal",
+          "cursor": "pointer",
+          "transition": "0.3s"
+        }
+      },
+      {
+        "tag": "a",
+        "classes": "elementor-button btn-icon-left btn-border elementor-button-link default elementor-size-sm elementor-animation-btn-switch-text btn-custom-effect",
+        "text": "Send a message",
+        "styles": {
+          "display": "inline-block",
+          "padding": "9px 24px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "color": "#727272",
+          "backgroundColor": null,
+          "border": "1px solid rgba(255, 255, 255, 0.3)",
+          "borderRadius": "0px",
+          "textTransform": "none",
+          "letterSpacing": "normal",
+          "cursor": "pointer",
+          "transition": "0.3s ease-in-out"
+        }
+      },
+      {
+        "tag": "a",
+        "classes": "elementor-button btn-icon-right elementor-button-link default elementor-size-lg elementor-animation-float-2px ",
+        "text": "Let's talk now",
+        "styles": {
+          "display": "inline-block",
+          "padding": "18px 34px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "color": "#727272",
+          "backgroundColor": "#2d2c2b",
+          "border": "2px solid rgb(45, 44, 43)",
+          "borderRadius": "0px",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.5px",
+          "cursor": "pointer",
+          "transition": "0.3s ease-in-out"
+        }
+      },
+      {
+        "tag": "a",
+        "classes": "elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-icon btn-custom-effect",
+        "text": "Read all posts",
+        "styles": {
+          "display": "inline-block",
+          "padding": "0px",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "color": "#727272",
+          "backgroundColor": null,
+          "border": "0px none rgb(45, 44, 43)",
+          "borderRadius": "0px",
+          "textTransform": "none",
+          "letterSpacing": "normal",
+          "cursor": "pointer",
+          "transition": "0.3s ease-in-out"
+        }
+      },
+      {
+        "tag": "button",
+        "classes": "newsletter-submit",
+        "text": "Sending",
+        "styles": {
+          "display": "flex",
+          "padding": "9px 18px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "color": "#ffffff",
+          "backgroundColor": null,
+          "border": "0px none rgb(255, 255, 255)",
+          "borderRadius": "0px 4px 4px 0px",
+          "textTransform": "none",
+          "letterSpacing": "0.5px",
+          "cursor": "pointer",
+          "transition": "0.3s ease-in-out"
+        }
+      },
+      {
+        "tag": "a",
+        "classes": "elementor-button btn-icon-right elementor-button-link default elementor-size-md elementor-animation-btn-switch-text btn-custom-effect",
+        "text": "Purchase Crafto",
+        "styles": {
+          "display": "inline-block",
+          "padding": "15px 36px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "color": "#727272",
+          "backgroundColor": "#2d2c2b",
+          "border": "0px none rgb(45, 44, 43)",
+          "borderRadius": "50px",
+          "textTransform": "none",
+          "letterSpacing": "0.5px",
+          "cursor": "pointer",
+          "transition": "0.3s ease-in-out"
+        }
+      }
+    ],
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Digital\nagency",
+        "styles": {
+          "fontSize": "130px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "112px",
+          "letterSpacing": "-8px",
+          "textTransform": "none",
+          "margin": "0px 0px 30px"
+        }
+      },
+      {
+        "level": "h4",
+        "text": "World-class digital media agency.",
+        "styles": {
+          "fontSize": "38px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "40px",
+          "letterSpacing": "-2px",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "We are a creative bold digital agency based in  london.",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-3px",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "It's so challenging to find a good team to do great things. But we can provide y",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-3px",
+          "textTransform": "none",
+          "margin": "0px 0px 30px"
+        }
+      },
+      {
+        "level": "h3",
+        "text": "Design",
+        "styles": {
+          "fontSize": "30px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#ffffff",
+          "lineHeight": "44.8px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h3",
+        "text": "Development",
+        "styles": {
+          "fontSize": "30px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#ffffff",
+          "lineHeight": "44.8px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h3",
+        "text": "Marketing",
+        "styles": {
+          "fontSize": "30px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#ffffff",
+          "lineHeight": "44.8px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h3",
+        "text": "Content writing",
+        "styles": {
+          "fontSize": "30px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#ffffff",
+          "lineHeight": "44.8px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "Case studies",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-3px",
+          "textTransform": "none",
+          "margin": "0px 417.867px 0px 0px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "Intuition and strategy integrate the research methodology that we also apply to ",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-3px",
+          "textTransform": "none",
+          "margin": "0px 0px 5px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "Forward thinking team of designers, copywriters and developers.",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "500",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-2px",
+          "textTransform": "none",
+          "margin": "0px 0px 30px"
+        }
+      },
+      {
+        "level": "h2",
+        "text": "Our journal",
+        "styles": {
+          "fontSize": "55.008px",
+          "fontWeight": "600",
+          "fontFamily": "\"Space Grotesk\", sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "55.008px",
+          "letterSpacing": "-3px",
+          "textTransform": "none",
+          "margin": "0px"
+        }
+      },
+      {
+        "level": "h3",
+        "text": "52+ Pre-built websites",
+        "styles": {
+          "fontSize": "45.008px",
+          "fontWeight": "700",
+          "fontFamily": "Inter, sans-serif",
+          "color": "#2d2c2b",
+          "lineHeight": "50px",
+          "letterSpacing": "-1px",
+          "textTransform": "none",
+          "margin": "0px 0px 35px"
+        }
+      }
+    ],
+    "sections": [],
+    "cards": [],
+    "forms": [],
+    "footer": {
+      "styles": {
+        "padding": "0px",
+        "backgroundColor": null,
+        "color": "#727272"
+      }
+    }
+  },
+  "pageStructure": [
+    {
+      "section": "Hero Section",
+      "description": "Large hero with oversized typography and call-to-action",
+      "elements": [
+        "H1: 'Digital agency' - 130px, Space Grotesk, -8px letter-spacing, #2d2c2b",
+        "Subtitle paragraph: 17px, Inter, line-height 30px, #727272",
+        "Two CTA buttons (icon + discover link)",
+        "Badge text: 'Award winning agency'",
+        "Right side: Large feature image with heading overlay"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#ffffff or light",
+        "layout": "Two-column grid, left content, right image"
+      }
+    },
+    {
+      "section": "Logo Bar",
+      "description": "Client logos in horizontal row",
+      "elements": [
+        "5 client logos (Walmart, Invision, Netflix, Logitech, Amazon)",
+        "Grayscale filter on images"
+      ],
+      "styling": {
+        "padding": "40px 0px",
+        "backgroundColor": "#f7f7f7",
+        "layout": "Flex row, center aligned, evenly spaced"
+      }
+    },
+    {
+      "section": "About Section",
+      "description": "Company introduction with stats",
+      "elements": [
+        "H2: 55px, Space Grotesk, -3px letter-spacing",
+        "Large number display: '20+' with superscript",
+        "Body text: 17px, Inter",
+        "Three stat cards with icons and numbers (350+, 200+, 750+)"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#ffffff",
+        "layout": "Two-column, left text, right stats grid"
+      }
+    },
+    {
+      "section": "Services Section",
+      "description": "Four service cards with numbering",
+      "elements": [
+        "H2 heading: 55px",
+        "Four service cards: Design, Development, Marketing, Content writing",
+        "Each card: Number (01-04), icon, H3 (30px), description",
+        "Popular badge on Development card",
+        "Bottom CTA text + link"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#2d2c2b (dark)",
+        "textColor": "#ffffff",
+        "layout": "2x2 grid of cards"
+      }
+    },
+    {
+      "section": "Portfolio/Case Studies",
+      "description": "Filterable portfolio grid",
+      "elements": [
+        "H2: 'Case studies'",
+        "Filter tabs: All, Selected, Digital, Branding, Web",
+        "Portfolio grid items"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    {
+      "section": "Stats Section",
+      "description": "Company statistics with CTA",
+      "elements": [
+        "H2: 55px with highlighted word 'traditional'",
+        "Left: Description text + CTA button",
+        "Right: 4 stat counters with icons (users, projects, visitors, conversion %)"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#f7d2ca (peach)"
+      }
+    },
+    {
+      "section": "Awards Section",
+      "description": "Recognition badges",
+      "elements": [
+        "H2 heading",
+        "Two award cards: Envato (3x site of the day), Awwards (2x developer award)"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#ffea23 (yellow accent)"
+      }
+    },
+    {
+      "section": "Blog/Journal",
+      "description": "Latest blog posts",
+      "elements": [
+        "H2: 'Our journal'",
+        "CTA button: 'Read all posts'",
+        "Blog post cards (likely 3 columns)"
+      ],
+      "styling": {
+        "padding": "110px 0px",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    {
+      "section": "Marquee Text",
+      "description": "Scrolling text animation",
+      "elements": [
+        "Repeating words: marketing, analysis, strategy, business"
+      ],
+      "styling": {
+        "padding": "40px 0px",
+        "backgroundColor": "#e4e4e4",
+        "animation": "Horizontal scroll/marquee effect"
+      }
+    },
+    {
+      "section": "Footer",
+      "description": "Multi-column footer with newsletter",
+      "elements": [
+        "Logo + social links (Fb, Ig, Tw, Be)",
+        "Two location columns: Rotterdam, Barcelona",
+        "Contact column: Work inquiries, Job opportunities",
+        "Newsletter signup form",
+        "Bottom bar: Copyright, links (Privacy, Terms, Copyright)"
+      ],
+      "styling": {
+        "padding": "65px 0px",
+        "backgroundColor": "#1e1d1d (very dark)",
+        "textColor": "#828282 (gray)"
+      }
+    }
+  ],
+  "visualHierarchy": {
+    "primaryHeading": {
+      "fontSize": "130px",
+      "fontFamily": "Space Grotesk",
+      "fontWeight": "600",
+      "letterSpacing": "-8px",
+      "lineHeight": "112px",
+      "color": "#2d2c2b",
+      "usage": "Main hero heading only"
+    },
+    "secondaryHeading": {
+      "fontSize": "55px",
+      "fontFamily": "Space Grotesk",
+      "fontWeight": "600",
+      "letterSpacing": "-3px",
+      "lineHeight": "55px",
+      "color": "#2d2c2b",
+      "usage": "Section headings (H2)"
+    },
+    "tertiaryHeading": {
+      "fontSize": "38px",
+      "fontFamily": "Space Grotesk",
+      "fontWeight": "600",
+      "letterSpacing": "-2px",
+      "lineHeight": "40px",
+      "color": "#2d2c2b",
+      "usage": "Sub-headings (H3/H4)"
+    },
+    "cardHeading": {
+      "fontSize": "30px",
+      "fontFamily": "Space Grotesk",
+      "fontWeight": "500",
+      "lineHeight": "44.8px",
+      "color": "Varies (white on dark backgrounds)",
+      "usage": "Card titles, service headings"
+    },
+    "bodyText": {
+      "fontSize": "17px",
+      "fontFamily": "Inter",
+      "fontWeight": "400",
+      "lineHeight": "30px",
+      "color": "#727272",
+      "usage": "Main body paragraphs"
+    },
+    "smallText": {
+      "fontSize": "14px",
+      "fontFamily": "Inter",
+      "fontWeight": "400-500",
+      "color": "#727272",
+      "usage": "Buttons, labels, meta info"
+    }
+  },
+  "layoutPatterns": {
+    "containerMaxWidth": "1220px",
+    "containerPadding": "0px 15px",
+    "sectionPadding": "110px 0px",
+    "sectionPaddingMobile": "70px 0px",
+    "columnGap": "30px-60px depending on section",
+    "rowGap": "40px-60px",
+    "gridColumns": {
+      "twoColumn": "repeat(2, 1fr)",
+      "threeColumn": "repeat(3, 1fr)",
+      "fourColumn": "repeat(4, 1fr)"
+    },
+    "responsive": "Mobile-first, breakpoints at 768px, 992px, 1200px"
+  },
+  "designPatterns": {
+    "buttons": {
+      "primary": {
+        "description": "Filled dark button",
+        "styles": {
+          "backgroundColor": "#2d2c2b",
+          "color": "#ffffff",
+          "padding": "18px 34px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.5px",
+          "borderRadius": "0px",
+          "border": "2px solid #2d2c2b",
+          "transition": "all 0.3s ease-in-out",
+          "cursor": "pointer"
+        },
+        "hover": "Slight background color change or transform effect"
+      },
+      "secondary": {
+        "description": "Outlined/border button",
+        "styles": {
+          "backgroundColor": "transparent",
+          "color": "#727272",
+          "padding": "9px 24px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "border": "1px solid rgba(255, 255, 255, 0.3)",
+          "borderRadius": "0px",
+          "transition": "all 0.3s ease-in-out"
+        }
+      },
+      "ghost": {
+        "description": "Text-only with icon",
+        "styles": {
+          "backgroundColor": "transparent",
+          "color": "#727272",
+          "padding": "0px",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "border": "none",
+          "transition": "all 0.3s ease-in-out"
+        }
+      },
+      "pill": {
+        "description": "Rounded button",
+        "styles": {
+          "backgroundColor": "#2d2c2b",
+          "color": "#727272",
+          "padding": "15px 36px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "borderRadius": "50px",
+          "border": "none",
+          "letterSpacing": "0.5px"
+        }
+      }
+    },
+    "cards": {
+      "description": "Minimal cards with focus on content",
+      "styles": {
+        "backgroundColor": "Varies by section",
+        "padding": "30px-40px",
+        "border": "Usually none or subtle",
+        "borderRadius": "0px-10px",
+        "boxShadow": "Subtle or none"
+      }
+    },
+    "images": {
+      "description": "High-quality, large format images",
+      "treatment": [
+        "Some images have overlay text",
+        "Grayscale treatment for logos",
+        "Hover effects with subtle zoom or overlay change",
+        "Border radius varies: 0px, 10px, or 100% for circles"
+      ]
+    },
+    "animations": {
+      "transitions": "all 0.3s ease-in-out",
+      "hoverEffects": [
+        "Subtle color changes",
+        "Float/lift effect (2px transform)",
+        "Icon switching in buttons",
+        "Text switching effects"
+      ],
+      "scrollEffects": [
+        "Marquee text animation",
+        "Fade-in on scroll (likely)",
+        "Parallax effects on hero"
+      ]
+    }
+  },
+  "implementationGuide": {
+    "step1_fonts": {
+      "instruction": "Import Google Fonts",
+      "code": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');"
+    },
+    "step2_cssVariables": {
+      "instruction": "Define CSS custom properties for the design system",
+      "code": ":root {\n  /* Colors */\n  --color-primary: #2d2c2b;\n  --color-bg-peach: #f7d2ca;\n  --color-bg-gray: #e4e4e4;\n  --color-bg-dark: #1e1d1d;\n  --color-accent-yellow: #ffea23;\n  --color-accent-green: #48a133;\n  --color-bg-light: #f7f7f7;\n  --color-text-primary: #2d2c2b;\n  --color-text-secondary: #727272;\n  --color-text-light: #828282;\n  --color-white: #ffffff;\n  --color-black: #000000;\n  \n  /* Typography */\n  --font-heading: 'Space Grotesk', sans-serif;\n  --font-body: 'Inter', sans-serif;\n  \n  --font-size-hero: 130px;\n  --font-size-h2: 55px;\n  --font-size-h3: 38px;\n  --font-size-h4: 30px;\n  --font-size-body: 17px;\n  --font-size-small: 14px;\n  \n  --line-height-hero: 112px;\n  --line-height-h2: 55px;\n  --line-height-h3: 40px;\n  --line-height-h4: 44.8px;\n  --line-height-body: 30px;\n  \n  --letter-spacing-hero: -8px;\n  --letter-spacing-h2: -3px;\n  --letter-spacing-h3: -2px;\n  --letter-spacing-button: 0.5px;\n  \n  /* Spacing */\n  --section-padding: 110px 0;\n  --container-max-width: 1220px;\n  --container-padding: 0 15px;\n  \n  /* Effects */\n  --transition: all 0.3s ease-in-out;\n  --shadow-light: 0 5px 20px rgba(0, 0, 0, 0.1);\n  --shadow-medium: 0 0 20px rgba(0, 0, 0, 0.08);\n}"
+    },
+    "step3_baseStyles": {
+      "instruction": "Set up base/reset styles",
+      "code": "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: var(--font-body);\n  font-size: var(--font-size-body);\n  line-height: var(--line-height-body);\n  color: var(--color-text-secondary);\n  background-color: var(--color-white);\n}\n\n.container {\n  max-width: var(--container-max-width);\n  margin: 0 auto;\n  padding: var(--container-padding);\n}\n\nsection {\n  padding: var(--section-padding);\n}"
+    },
+    "step4_typography": {
+      "instruction": "Style headings according to hierarchy",
+      "code": "h1 {\n  font-family: var(--font-heading);\n  font-size: var(--font-size-hero);\n  font-weight: 600;\n  line-height: var(--line-height-hero);\n  letter-spacing: var(--letter-spacing-hero);\n  color: var(--color-text-primary);\n  margin-bottom: 30px;\n}\n\nh2 {\n  font-family: var(--font-heading);\n  font-size: var(--font-size-h2);\n  font-weight: 600;\n  line-height: var(--line-height-h2);\n  letter-spacing: var(--letter-spacing-h2);\n  color: var(--color-text-primary);\n}\n\nh3 {\n  font-family: var(--font-heading);\n  font-size: var(--font-size-h4);\n  font-weight: 500;\n  line-height: var(--line-height-h4);\n  color: var(--color-text-primary);\n}\n\nh4 {\n  font-family: var(--font-heading);\n  font-size: var(--font-size-h3);\n  font-weight: 600;\n  line-height: var(--line-height-h3);\n  letter-spacing: var(--letter-spacing-h3);\n  color: var(--color-text-primary);\n}\n\np {\n  font-size: var(--font-size-body);\n  line-height: var(--line-height-body);\n  color: var(--color-text-secondary);\n}"
+    },
+    "step5_buttons": {
+      "instruction": "Create button component styles",
+      "code": ".btn {\n  display: inline-block;\n  font-size: var(--font-size-small);\n  font-weight: 500;\n  padding: 18px 34px;\n  text-decoration: none;\n  border: none;\n  cursor: pointer;\n  transition: var(--transition);\n  letter-spacing: var(--letter-spacing-button);\n}\n\n.btn-primary {\n  background-color: var(--color-primary);\n  color: var(--color-white);\n  border: 2px solid var(--color-primary);\n  text-transform: uppercase;\n}\n\n.btn-primary:hover {\n  transform: translateY(-2px);\n}\n\n.btn-secondary {\n  background-color: transparent;\n  color: var(--color-text-secondary);\n  border: 1px solid rgba(255, 255, 255, 0.3);\n  padding: 9px 24px;\n}\n\n.btn-ghost {\n  background: transparent;\n  border: none;\n  padding: 0;\n  font-size: 18px;\n}\n\n.btn-pill {\n  background-color: var(--color-primary);\n  color: var(--color-white);\n  border-radius: 50px;\n  padding: 15px 36px;\n}"
+    },
+    "step6_sections": {
+      "instruction": "Create section background variations",
+      "code": ".section-light {\n  background-color: var(--color-bg-light);\n}\n\n.section-dark {\n  background-color: var(--color-primary);\n  color: var(--color-white);\n}\n\n.section-dark h2,\n.section-dark h3 {\n  color: var(--color-white);\n}\n\n.section-peach {\n  background-color: var(--color-bg-peach);\n}\n\n.section-yellow {\n  background-color: var(--color-accent-yellow);\n}\n\n.section-gray {\n  background-color: var(--color-bg-gray);\n}"
+    },
+    "step7_responsive": {
+      "instruction": "Add responsive breakpoints",
+      "code": "/* Tablet */\n@media (max-width: 992px) {\n  h1 {\n    font-size: 80px;\n    line-height: 70px;\n    letter-spacing: -4px;\n  }\n  \n  h2 {\n    font-size: 42px;\n    line-height: 42px;\n  }\n  \n  section {\n    padding: 70px 0;\n  }\n}\n\n/* Mobile */\n@media (max-width: 768px) {\n  h1 {\n    font-size: 50px;\n    line-height: 48px;\n    letter-spacing: -2px;\n  }\n  \n  h2 {\n    font-size: 32px;\n    line-height: 34px;\n  }\n  \n  .btn {\n    padding: 14px 28px;\n  }\n  \n  section {\n    padding: 50px 0;\n  }\n}"
+    }
+  },
+  "keyTakeaways": [
+    "Modern, clean design with generous whitespace",
+    "Bold typography with Space Grotesk for headings, tight letter-spacing",
+    "Limited color palette: Dark brown (#2d2c2b) as primary, peach (#f7d2ca) and yellow (#ffea23) as accents",
+    "Section padding is consistently 110px vertical",
+    "Button styles vary significantly - primary (filled), secondary (outlined), ghost (text-only), pill (rounded)",
+    "Minimal use of shadows and borders",
+    "Smooth transitions at 0.3s ease-in-out throughout",
+    "Typography hierarchy is very pronounced with large size differences",
+    "Container max-width is 1220px",
+    "Uses negative letter-spacing on large headings for a tight, modern look",
+    "Background colors alternate between sections for visual interest",
+    "Footer has dark background (#1e1d1d) with lighter text",
+    "Images are high-quality and large format",
+    "Responsive design with mobile-first approach"
+  ]
+}

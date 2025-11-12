@@ -76,6 +76,7 @@ export async function POST(request: NextRequest) {
     // Record conversion with attribution tracking
     const journey = getOrCreateJourney(userId);
     const conversion = recordConversion(userId, {
+      userId,
       type: 'contact-form',
       value: 0, // No immediate revenue, but we can set a potential value later
       leadData: {

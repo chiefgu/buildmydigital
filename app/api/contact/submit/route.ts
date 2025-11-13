@@ -270,6 +270,10 @@ async function sendEmailNotifications(
  * Send Telegram notification with enriched lead data and attribution
  */
 async function notifyTeamOfNewLead(lead: LeadData, conversion?: any) {
+  // DISABLED: Telegram notifications temporarily disabled
+  console.log('[Contact Submit] Telegram notifications disabled');
+  return;
+
   const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
   const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 

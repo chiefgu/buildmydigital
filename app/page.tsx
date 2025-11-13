@@ -206,7 +206,7 @@ export default function Home() {
           </motion.div>
 
           {/* Radial Visualization Container */}
-          <div className="relative" style={{ height: '600px' }}>
+          <div className="relative overflow-hidden" style={{ height: 'clamp(350px, 80vw, 600px)' }}>
             {/* Concentric Circles - Animated Background */}
             <motion.div
               initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8 } : {}}
@@ -215,9 +215,13 @@ export default function Home() {
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <div className="relative" style={{ width: '500px', height: '500px' }}>
+              <div className="relative w-full h-full max-w-[500px] max-h-[500px]">
                 {/* Generate concentric circles aligned with features */}
-                {[140, 280, 420].map((size, i) => (
+                {[
+                  { mobile: 100, desktop: 140 },
+                  { mobile: 200, desktop: 280 },
+                  { mobile: 280, desktop: 420 }
+                ].map((sizes, i) => (
                   <motion.div
                     key={i}
                     initial={!shouldReduceMotion ? { scale: 0, opacity: 0 } : {}}
@@ -229,7 +233,10 @@ export default function Home() {
                       ease: [0.22, 1, 0.36, 1] as const
                     }}
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-300/50"
-                    style={{ width: `${size}px`, height: `${size}px` }}
+                    style={{
+                      width: `min(${sizes.mobile}px, ${(sizes.desktop / 500) * 100}%)`,
+                      height: `min(${sizes.mobile}px, ${(sizes.desktop / 500) * 100}%)`,
+                    }}
                   />
                 ))}
               </div>
@@ -254,51 +261,61 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Feature Nodes - Positioned Radially */}
-            {[
-              { label: 'High-Converting Websites', angle: 0, radius: 210 },
-              { label: 'Lead Generation', angle: 45, radius: 210 },
-              { label: 'Commission Closers', angle: 90, radius: 210 },
-              { label: 'Custom Software', angle: 135, radius: 210 },
-              { label: 'AI Integration', angle: 180, radius: 210 },
-              { label: 'CRM & Analytics', angle: 225, radius: 210 },
-              { label: 'Payment Processing', angle: 270, radius: 210 },
-              { label: 'Email Automation', angle: 315, radius: 210 },
-            ].map((feature, i) => {
-              const x = Math.cos((feature.angle - 90) * Math.PI / 180) * feature.radius;
-              const y = Math.sin((feature.angle - 90) * Math.PI / 180) * feature.radius;
+            {/* Feature Nodes - Positioned Radially - Hidden on small mobile */}
+            <div className="hidden sm:block">
+              {[
+                { label: 'High-Converting Websites', angle: 0 },
+                { label: 'Lead Generation', angle: 45 },
+                { label: 'Commission Closers', angle: 90 },
+                { label: 'Custom Software', angle: 135 },
+                { label: 'AI Integration', angle: 180 },
+                { label: 'CRM & Analytics', angle: 225 },
+                { label: 'Payment Processing', angle: 270 },
+                { label: 'Email Automation', angle: 315 },
+              ].map((feature, i) => {
+                // Use smaller radius on tablet, larger on desktop
+                const mobileRadius = 140;
+                const desktopRadius = 210;
+                const xMobile = Math.cos((feature.angle - 90) * Math.PI / 180) * mobileRadius;
+                const yMobile = Math.sin((feature.angle - 90) * Math.PI / 180) * mobileRadius;
+                const xDesktop = Math.cos((feature.angle - 90) * Math.PI / 180) * desktopRadius;
+                const yDesktop = Math.sin((feature.angle - 90) * Math.PI / 180) * desktopRadius;
 
-              return (
-                <motion.div
-                  key={i}
-                  initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
-                  whileInView={!shouldReduceMotion ? {
-                    opacity: 1,
-                    scale: 1,
-                    x: x,
-                    y: y
-                  } : {}}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.4 + (i * 0.1),
-                    ease: [0.22, 1, 0.36, 1] as const
-                  }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="w-14 h-14 mb-2 rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
-                      <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                return (
+                  <motion.div
+                    key={i}
+                    initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
+                    whileInView={!shouldReduceMotion ? {
+                      opacity: 1,
+                      scale: 1,
+                      x: xDesktop,
+                      y: yDesktop
+                    } : {}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.4 + (i * 0.1),
+                      ease: [0.22, 1, 0.36, 1] as const
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    style={{
+                      transform: `translate(-50%, -50%) translate(${xMobile}px, ${yMobile}px)`,
+                    }}
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 mb-2 rounded-xl sm:rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
+                        <span className="text-[10px] sm:text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                      </div>
                     </div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
-                      <span className="text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Bottom Section - Unified Platform */}

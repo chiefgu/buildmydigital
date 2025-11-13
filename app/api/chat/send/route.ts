@@ -263,6 +263,10 @@ Be concise and actionable. Focus on what matters for the sales conversation. Pay
 
 // Helper function to notify team via Telegram Topics
 async function notifyTeamViaTelegram(session: any, userMessage: Message) {
+  // DISABLED: Telegram notifications temporarily disabled
+  console.log('[Chat Send] Telegram notifications disabled');
+  return;
+
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_TEAM_CHAT_ID;
 

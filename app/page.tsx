@@ -285,41 +285,97 @@ export default function Home() {
               const yDesktop = Math.sin((feature.angle - 90) * Math.PI / 180) * desktopRadius;
 
               return (
-                <motion.div
-                  key={i}
-                  initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8 } : {}}
-                  whileInView={!shouldReduceMotion ? {
-                    opacity: 1,
-                    scale: 1,
-                  } : {}}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.4 + (i * 0.1),
-                    ease: [0.22, 1, 0.36, 1] as const
-                  }}
-                  className="absolute top-1/2 left-1/2 feature-node"
-                  style={{
-                    // @ts-ignore - CSS custom properties
-                    '--x-mobile': `${xMobile}px`,
-                    '--y-mobile': `${yMobile}px`,
-                    '--x-tablet': `${xTablet}px`,
-                    '--y-tablet': `${yTablet}px`,
-                    '--x-desktop': `${xDesktop}px`,
-                    '--y-desktop': `${yDesktop}px`,
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mb-1 sm:mb-2 rounded-xl sm:rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                <>
+                  {/* Mobile positioning */}
+                  <motion.div
+                    key={`${i}-mobile`}
+                    initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
+                    whileInView={!shouldReduceMotion ? {
+                      opacity: 1,
+                      scale: 1,
+                      x: xMobile,
+                      y: yMobile
+                    } : {}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.4 + (i * 0.1),
+                      ease: [0.22, 1, 0.36, 1] as const
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:hidden"
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 mb-1 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
+                        <svg className="w-3 h-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
+                        <span className="text-[9px] font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                      </div>
                     </div>
-                    <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
-                      <span className="text-[9px] sm:text-[10px] md:text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                  </motion.div>
+
+                  {/* Tablet positioning */}
+                  <motion.div
+                    key={`${i}-tablet`}
+                    initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
+                    whileInView={!shouldReduceMotion ? {
+                      opacity: 1,
+                      scale: 1,
+                      x: xTablet,
+                      y: yTablet
+                    } : {}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.4 + (i * 0.1),
+                      ease: [0.22, 1, 0.36, 1] as const
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block lg:hidden"
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="w-10 h-10 mb-2 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
+                        <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
+                        <span className="text-[10px] font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+
+                  {/* Desktop positioning */}
+                  <motion.div
+                    key={`${i}-desktop`}
+                    initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
+                    whileInView={!shouldReduceMotion ? {
+                      opacity: 1,
+                      scale: 1,
+                      x: xDesktop,
+                      y: yDesktop
+                    } : {}}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.4 + (i * 0.1),
+                      ease: [0.22, 1, 0.36, 1] as const
+                    }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block"
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="w-14 h-14 mb-2 rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
+                        <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
+                        <span className="text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                </>
               );
             })}
           </div>

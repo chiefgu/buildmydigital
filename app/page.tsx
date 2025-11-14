@@ -261,61 +261,67 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Feature Nodes - Positioned Radially - Hidden on small mobile */}
-            <div className="hidden sm:block">
-              {[
-                { label: 'High-Converting Websites', angle: 0 },
-                { label: 'Lead Generation', angle: 45 },
-                { label: 'Commission Closers', angle: 90 },
-                { label: 'Custom Software', angle: 135 },
-                { label: 'AI Integration', angle: 180 },
-                { label: 'CRM & Analytics', angle: 225 },
-                { label: 'Payment Processing', angle: 270 },
-                { label: 'Email Automation', angle: 315 },
-              ].map((feature, i) => {
-                // Use smaller radius on tablet, larger on desktop
-                const mobileRadius = 140;
-                const desktopRadius = 210;
-                const xMobile = Math.cos((feature.angle - 90) * Math.PI / 180) * mobileRadius;
-                const yMobile = Math.sin((feature.angle - 90) * Math.PI / 180) * mobileRadius;
-                const xDesktop = Math.cos((feature.angle - 90) * Math.PI / 180) * desktopRadius;
-                const yDesktop = Math.sin((feature.angle - 90) * Math.PI / 180) * desktopRadius;
+            {/* Feature Nodes - Positioned Radially */}
+            {[
+              { label: 'High-Converting Websites', angle: 0 },
+              { label: 'Lead Generation', angle: 45 },
+              { label: 'Commission Closers', angle: 90 },
+              { label: 'Custom Software', angle: 135 },
+              { label: 'AI Integration', angle: 180 },
+              { label: 'CRM & Analytics', angle: 225 },
+              { label: 'Payment Processing', angle: 270 },
+              { label: 'Email Automation', angle: 315 },
+            ].map((feature, i) => {
+              // Responsive radius: 120px mobile, 160px tablet, 210px desktop
+              const mobileRadius = 120;
+              const tabletRadius = 160;
+              const desktopRadius = 210;
 
-                return (
-                  <motion.div
-                    key={i}
-                    initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8, x: 0, y: 0 } : {}}
-                    whileInView={!shouldReduceMotion ? {
-                      opacity: 1,
-                      scale: 1,
-                      x: xDesktop,
-                      y: yDesktop
-                    } : {}}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 0.4 + (i * 0.1),
-                      ease: [0.22, 1, 0.36, 1] as const
-                    }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                    style={{
-                      transform: `translate(-50%, -50%) translate(${xMobile}px, ${yMobile}px)`,
-                    }}
-                  >
-                    <div className="flex flex-col items-center">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 mb-2 rounded-xl sm:rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
-                        <span className="text-[10px] sm:text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
-                      </div>
+              const xMobile = Math.cos((feature.angle - 90) * Math.PI / 180) * mobileRadius;
+              const yMobile = Math.sin((feature.angle - 90) * Math.PI / 180) * mobileRadius;
+              const xTablet = Math.cos((feature.angle - 90) * Math.PI / 180) * tabletRadius;
+              const yTablet = Math.sin((feature.angle - 90) * Math.PI / 180) * tabletRadius;
+              const xDesktop = Math.cos((feature.angle - 90) * Math.PI / 180) * desktopRadius;
+              const yDesktop = Math.sin((feature.angle - 90) * Math.PI / 180) * desktopRadius;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={!shouldReduceMotion ? { opacity: 0, scale: 0.8 } : {}}
+                  whileInView={!shouldReduceMotion ? {
+                    opacity: 1,
+                    scale: 1,
+                  } : {}}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.4 + (i * 0.1),
+                    ease: [0.22, 1, 0.36, 1] as const
+                  }}
+                  className="absolute top-1/2 left-1/2 feature-node"
+                  style={{
+                    // @ts-ignore - CSS custom properties
+                    '--x-mobile': `${xMobile}px`,
+                    '--y-mobile': `${yMobile}px`,
+                    '--x-tablet': `${xTablet}px`,
+                    '--y-tablet': `${yTablet}px`,
+                    '--x-desktop': `${xDesktop}px`,
+                    '--y-desktop': `${yDesktop}px`,
+                  }}
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mb-1 sm:mb-2 rounded-xl sm:rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all">
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    <div className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200">
+                      <span className="text-[9px] sm:text-[10px] md:text-xs font-semibold text-gray-900 whitespace-nowrap">{feature.label}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Bottom Section - Unified Platform */}

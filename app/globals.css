@@ -513,3 +513,20 @@ input[id="userEmail"] {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Responsive spiral feature nodes */
+.feature-node {
+  transform: translate(-50%, -50%) translate(var(--x-mobile), var(--y-mobile));
+}
+
+@media (min-width: 640px) {
+  .feature-node {
+    transform: translate(-50%, -50%) translate(var(--x-tablet), var(--y-tablet));
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-node {
+    transform: translate(-50%, -50%) translate(var(--x-desktop), var(--y-desktop));
+  }
+}
